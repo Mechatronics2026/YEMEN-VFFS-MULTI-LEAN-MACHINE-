@@ -1,0 +1,789 @@
+/* 
+  تعريف المتغيرات الأساسية للألوان 
+  هذه المتغيرات تحتفظ بقيم الألوان المستخدمة في التصميم
+*/
+:root {
+    --electric-blue: #00f2ff;
+    --neon-blue: #00b4ff;
+    --neon-green: #00ff9d;
+    --neon-pink: #ff00aa;
+    --neon-purple: #b400ff;
+    --neon-yellow: #ffee00;
+    --neon-orange: #ff7b00;
+    --dark-bg: #0a0a12;
+    --darker-bg: #050508;
+    --card-bg: rgba(20, 20, 30, 0.8);
+    --text-primary: #f0f0f0;
+    --text-secondary: #b0b0b0;
+}
+
+/* 
+  استيراد خط Orbitron من جوجل فونتس 
+  يستخدم للعناوين والعناصر التي تحتاج مظهرًا مستقبليًا
+*/
+@font-face {
+    font-family: 'Orbitron';
+    src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+}
+
+/* 
+  استيراد خط Rajdhani من جوجل فونتس 
+  الخط الأساسي للنصوص في التصميم
+*/
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap');
+}
+
+/* 
+  استيراد خط عربي من جوجل فونتس (Amiri)
+  مخصص للنصوص العربية في التصميم
+*/
+@font-face {
+    font-family: 'Arabic';
+    src: url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+}
+
+/* 
+  إعدادات عامة للصفحة 
+  الخلفية، الألوان، الخط الأساسي، وخلفية متدرجة
+*/
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0, 178, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 255, 157, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* 
+  تعديل اتجاه الصفحة للغة العربية 
+  يتم تفعيله عندما تكون لغة الصفحة عربية أو عند تحديد الاتجاه RTL
+*/
+html[dir="rtl"] body,
+html[lang="ar"] body {
+    direction: rtl;
+}
+
+/* 
+  كلاس مخصص لخط Orbitron 
+  يضيف تباعدًا بين الحروف لمظهر أكثر وضوحًا
+*/
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* 
+  كلاس مخصص لخط Rajdhani 
+*/
+.font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* 
+  كلاس مخصص للخط العربي 
+  يضبط اتجاه النص من اليمين لليسار
+*/
+.font-arabic {
+    font-family: 'Arabic', serif;
+    direction: rtl;
+}
+
+/* 
+  تنسيق رأس الصفحة المستقبلي 
+  خلفية متدرجة، حدود، ظلال، وتأثيرات بصرية
+*/
+.futuristic-header {
+    background: linear-gradient(135deg, rgba(10, 10, 30, 0.8) 0%, rgba(20, 20, 50, 0.9) 100%);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 180, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 
+  تأثير دائري متحرك خلف رأس الصفحة 
+  يدور باستمرار لإضافة حركة ديناميكية
+*/
+.futuristic-header::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 10%;
+    width: 50%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(100, 242, 255, 0.06) 0%, transparent 70%);
+    animation: rotate 40s linear infinite;
+}
+
+/* 
+  حركة الدوران للتأثير الدائري 
+*/
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 
+  تأثير توهج النيون 
+  يضيف ظلالًا ملونة حول العنصر
+*/
+.neon-glow {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.5), 
+                0 0 30px rgba(0, 180, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+/* 
+  تأثير التوهج عند تمرير المؤشر 
+  يزيد من شدة التوهج
+*/
+.neon-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.8), 
+                0 0 40px rgba(0, 180, 255, 0.5);
+}
+
+/* 
+  حدود النيون 
+  حدود ملونة مع توهج
+*/
+.neon-border {
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* 
+  تأثير حدود النيون عند تمرير المؤشر 
+  يغير لون الحدود ويزيد التوهج
+*/
+.neon-border:hover {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+}
+
+/* 
+  ألوان النيون للنصوص 
+  كل كلاس يضيف لونًا مختلفًا مع توهج
+*/
+.text-electric-blue {
+    color: var(--electric-blue);
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+}
+
+.text-neon-blue {
+    color: var(--neon-blue);
+}
+
+.text-neon-green {
+    color: var(--neon-green);
+}
+
+.text-neon-pink {
+    color: var(--neon-pink);
+}
+
+.text-neon-purple {
+    color: var(--neon-purple);
+}
+
+.text-neon-yellow {
+    color: var(--neon-yellow);
+}
+
+.text-neon-orange {
+    color: var(--neon-orange);
+}
+
+/* 
+  تنسيق عناوين الأقسام 
+  يضيف خطًا ملونًا أسفل العنوان
+*/
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+/* 
+  الخط الملون تحت عناوين الأقسام 
+*/
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-blue), transparent);
+}
+
+/* 
+  تعديل اتجاه الخط الملون للغة العربية 
+  ينقل الخط من اليسار إلى اليمين ويعكس التدرج
+*/
+html[dir="rtl"] .section-title::after,
+html[lang="ar"] .section-title::after {
+    left: auto;
+    right: 0;
+    background: linear-gradient(270deg, var(--neon-blue), transparent);
+}
+
+/* 
+  حاوية الأيقونات 
+  تصميم مربع لأيقونات الأقسام
+*/
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 180, 255, 0.2);
+    border-radius: 12px;
+    margin-right: 15px;
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.3);
+}
+
+/* 
+  تعديل اتجاه حاوية الأيقونات للغة العربية 
+  ينقل الهوامش من اليمين إلى اليسار
+*/
+html[dir="rtl"] .icon-wrapper,
+html[lang="ar"] .icon-wrapper {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* 
+  تنسيق الكروت الأساسية 
+  خلفية شبه شفافة، حدود، ظلال، وتأثيرات حركية
+*/
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 180, 255, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+  تأثير التدرج خلف الكروت 
+*/
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 180, 255, 0.1) 0%, transparent 100%);
+    z-index: -1;
+}
+
+/* 
+  تأثير الكروت عند تمرير المؤشر 
+  حركة طفيفة للأعلى وتغيير في الظلال
+*/
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 180, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 180, 255, 0.2);
+}
+
+/* 
+  كروت التمييز 
+  لها حد أيسر ملون وخلفية مميزة
+*/
+.highlight-box {
+    background: rgba(0, 100, 150, 0.2);
+    border-left: 4px solid var(--neon-blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* 
+  تعديل كروت التمييز للغة العربية 
+  ينقل الحد من اليسار إلى اليمين
+*/
+html[dir="rtl"] .highlight-box,
+html[lang="ar"] .highlight-box {
+    border-left: none;
+    border-right: 4px solid var(--neon-blue);
+}
+
+/* 
+  تأثير كروت التمييز عند تمرير المؤشر 
+  يغير لون الحد ويزيد شفافية الخلفية
+*/
+.highlight-box:hover {
+    background: rgba(0, 100, 150, 0.3);
+    border-left-color: var(--electric-blue);
+}
+
+/* 
+  تعديل تأثير كروت التمييز للغة العربية 
+  يغير لون الحد الأيمن بدلاً من الأيسر
+*/
+html[dir="rtl"] .highlight-box:hover,
+html[lang="ar"] .highlight-box:hover {
+    border-right-color: var(--electric-blue);
+}
+
+/* 
+  كروت الإحصائيات 
+  تصميم خاص للكروت التي تعرض إحصائيات
+*/
+.stats-card {
+    background: rgba(20, 20, 40, 0.7);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 180, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* 
+  تأثير كروت الإحصائيات عند تمرير المؤشر 
+*/
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.2);
+    border-color: rgba(0, 180, 255, 0.3);
+}
+
+/* 
+  مكانس للصور 
+  مساحة مخصصة لوضع الصور مع حدود متقطعة
+*/
+.photo-placeholder {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed rgba(0, 180, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 20, 30, 0.5);
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* 
+  تأثير أماكن الصور عند تمرير المؤشر 
+*/
+.photo-placeholder:hover {
+    border-color: var(--neon-blue);
+    background: rgba(10, 30, 50, 0.7);
+}
+
+/* 
+  تنسيق الجداول 
+  تصميم متجاوب للجداول مع تأثيرات
+*/
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: rgba(20, 20, 40, 0.7);
+    border: 1px solid rgba(0, 180, 255, 0.1);
+}
+
+/* 
+  إعدادات أساسية للجداول 
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 
+  تنسيق خلايا الجدول 
+*/
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 180, 255, 0.1);
+}
+
+/* 
+  تعديل اتجاه نص الجداول للغة العربية 
+*/
+html[dir="rtl"] th,
+html[dir="rtl"] td,
+html[lang="ar"] th,
+html[lang="ar"] td {
+    text-align: right;
+}
+
+/* 
+  تنسيق رؤوس الجداول 
+*/
+th {
+    background: rgba(0, 100, 150, 0.3);
+    color: var(--neon-blue);
+    font-weight: 600;
+}
+
+/* 
+  تأثير الصفوف عند تمرير المؤشر 
+*/
+tr:hover td {
+    background: rgba(0, 180, 255, 0.05);
+}
+
+/* 
+  حاوية الرسوم البيانية 
+*/
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin: 20px 0;
+    background: rgba(20, 20, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 180, 255, 0.1);
+    padding: 20px;
+}
+
+/* 
+  قسم فريق العمل 
+*/
+.team-section {
+    margin-top: 3rem;
+}
+
+/* 
+  تنسيق أعضاء الفريق 
+*/
+.team-member {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* 
+  تأثير أعضاء الفريق عند تمرير المؤشر 
+*/
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+/* 
+  الدائرة المضيئة لأعضاء الفريق 
+*/
+.neon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.5);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* 
+  تنسيق صور أعضاء الفريق 
+*/
+.neon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+  ألوان مختلفة لدوائر أعضاء الفريق 
+  كل عضو له لون حد وتوهج مختلف
+*/
+.team-member:nth-child(1) .neon-circle {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.5);
+}
+
+.team-member:nth-child(2) .neon-circle {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+}
+
+.team-member:nth-child(3) .neon-circle {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 15px rgba(180, 0, 255, 0.5);
+}
+
+.team-member:nth-child(4) .neon-circle {
+    border-color: var(--neon-yellow);
+    box-shadow: 0 0 15px rgba(255, 238, 0, 0.5);
+}
+
+.team-member:nth-child(5) .neon-circle {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.5);
+}
+
+.team-member:nth-child(6) .neon-circle {
+    border-color: var(--neon-orange);
+    box-shadow: 0 0 15px rgba(255, 123, 0, 0.5);
+}
+
+/* 
+  تأثير الدوائر المضيئة عند تمرير المؤشر 
+*/
+.team-member:hover .neon-circle {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px;
+}
+
+/* 
+  فاصل بين الأقسام 
+*/
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.5), transparent);
+    margin: 2rem 0;
+}
+
+/* 
+  حركة الطفو 
+  تستخدم لجعل العناصر تتحرك لأعلى ولأسفل
+*/
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 
+  تأثيرات التمرير 
+  تحكم في ظهور العناصر عند التمرير
+*/
+[data-scroll] {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-scroll="fade-in"] {
+    transform: translateY(20px);
+}
+
+[data-scroll="fade-on"] {
+    transform: translateY(-20px);
+}
+
+[data-scroll="fade-left"] {
+    transform: translateX(-20px);
+}
+
+[data-scroll="fade-right"] {
+    transform: translateX(20px);
+}
+
+[data-scroll].is-visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* 
+  تعديلات للهواتف المحمولة 
+*/
+@media (max-width: 768px) {
+    .section-title::after {
+        width: 60px;
+    }
+    
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+    
+    /* 
+      تعديل حاوية الأيقونات للغة العربية في الهواتف 
+    */
+    html[dir="rtl"] .icon-wrapper,
+    html[lang="ar"] .icon-wrapper {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    
+    .team-member {
+        margin-bottom: 2rem;
+    }
+}
+
+/* 
+  تنسيق النصوص العربية 
+*/
+.arabic-text {
+    font-family: 'Arabic', serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.7);
+    direction: rtl;
+}
+
+/* 
+  تأثيرات التمرير لجميع الأقسام 
+*/
+section, .card, .highlight-box, .stats-card, .chart-container, .table-responsive, .team-member {
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+/* 
+  حالة الظهور عند التمرير 
+*/
+section.is-visible,
+.card.is-visible,
+.highlight-box.is-visible,
+.stats-card.is-visible,
+.chart-container.is-visible,
+.table-responsive.is-visible,
+.team-member.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 
+  توهج لعناوين الأقسام 
+*/
+h2, h3, h4.section-title {
+    text-shadow: 0 0 5px rgba(0, 180, 255, 0.5), 0 0 10px rgba(0, 180, 255, 0.2);
+}
+
+/* 
+  تأثير حركي للعناوين 
+*/
+.section-title[data-animate] {
+    opacity: 1;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title[data-animate].is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 
+  تأثير النبض للتوهج 
+*/
+.pulse {
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 242, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    }
+}
+
+/* 
+  تأثيرات التمرير العامة 
+*/
+[data-scroll] {
+  opacity: 1;
+  transform: translateY(90px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+
+[data-scroll].is-visible {
+  opacity: 1;
+  transform: translateY(90px);
+}
+
+/* 
+  تأثيرات التمرير الفردية 
+*/
+[data-scroll="fade-in"] {
+  transform: translateY(90px);
+}
+
+[data-scroll="fade-on"] {
+  transform: translateY(-30px);
+}
+[data-scroll="fade-left"] {
+  transform: translateX(-60px);
+}
+[data-scroll="fade-right"] {
+  transform: translateX(60px);
+}
+
+[data-scroll="fade-in"].is-visible,
+[data-scroll="fade-left"].is-visible,
+[data-scroll="fade-right"].is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* 
+  تأثيرات الكروت عند التمرير 
+*/
+.card:hover, .highlight-box:hover, .stats-card:hover {
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.3), 0 0 50px rgba(0, 180, 255, 0.1);
+    transform: translateY(-10px);
+}
+
+/* 
+  كروت التمييز ذات الحد السفلي 
+  هذه النسخة لها حد سفلي بدلاً من الجانبي
+*/
+.highlight-box-bottom {
+  background: rgba(0, 100, 150, 0.2);
+  border-left: none;
+  border-bottom: 4px solid var(--neon-blue);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+/* 
+  تأثير كروت التمييز ذات الحد السفلي عند التمرير 
+  تم إصلاح المشكلة حيث كان التأثير لا يعمل مع العربية
+*/
+.highlight-box-bottom:hover {
+  background: rgba(0, 100, 150, 0.3);
+  border-bottom-color: var(--electric-blue);
+}
+
+/* 
+  التأكد من أن تأثير الحد السفلي يعمل في العربية 
+  بدون تغيير الحد السفلي
+*/
+html[dir="rtl"] .highlight-box-bottom,
+html[lang="ar"] .highlight-box-bottom {
+    border-right: none;
+    border-bottom: 4px solid var(--neon-blue);
+}
+
+/* 
+  التأكد من أن تأثير التوهج يعمل في العربية 
+*/
+html[dir="rtl"] .highlight-box-bottom:hover,
+html[lang="ar"] .highlight-box-bottom:hover {
+    border-bottom-color: var(--electric-blue);
+}

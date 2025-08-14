@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=1024" name="viewport" />
+  <title>دراسة جدوى أولية - مشروع آلة التعبئة متعددة المسارات</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Rajdhani:wght@300;500;700&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Main Interface and Language Switch Buttons -->
+<div class="flex justify-start space-x-4 p-4">
+  <a href="index.html" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+    العودة إلى الواجهة الرئيسية
+  </a>
+  <a href="feasibility_study.html" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+    Translate to English
+  </a>
+</div>
+    <!-- Study Cover -->
+    <div class="futuristic-header flex flex-col md:flex-row-reverse items-center gap-8 text-center md:text-right">
+      <div class="header-image flex-shrink-0 w-full md:w-1/2 flex justify-center">
+        <img alt="Study Interface Image" class="rounded-2xl neon-glow object-cover w-full md:w-[350px] max-w-full h-auto" src="images/study_interface.png" style="max-height:1057px;" />
+      </div>
+      <div class="header-content w-full md:w-1/2 flex flex-col items-center md:items-start justify-center">
+        <div class="arabic-text mb-6">
+          <h1 class="text-4xl font-arabic">بسم الله الرحمن الرحيم</h1>
+        </div>
+        <h1 class="text-4xl text-electric-blue mb-4 font-bold font-orbitron">دراسة جدوى أولية</h1>
+        <h2 class="text-3xl mb-6 text-neon-purple font-semibold font-orbitron">مشروع آلة التعبئة والتغليف متعددة المسارات</h2>
+        <div class="text-xl text-neon-green mb-6">
+          <p>
+            مشروع تخرج لطلاب قسم الميكاترونكس
+          </p>
+          <p class="font-semibold">
+            جامعة ذمار
+          </p>
+        </div>
+        <div class="bg-black bg-opacity-40 backdrop-blur-sm p-6 rounded-2xl border border-neon-blue border-opacity-50 mt-2 flex items-center gap-4 neon-border">
+          <i class="fas fa-cogs text-neon-blue text-5xl"></i>
+          <p class="text-neon-blue text-lg font-medium font-rajdhani">
+            VFFS MULTI-LANE MACHINE
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- فهرس المحتويات -->
+    <div class="content-section">
+      <h2 class="section-title text-3xl mb-8" data-scroll="fade-left">
+        <span class="icon-wrapper">
+          <i class="fas fa-list-ul"></i>
+        </span>
+        فهرس المحتويات
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+          <ul class="space-y-4">
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#introduction">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>1. مقدمة المشروع</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#technical">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>2. الوصف الفني</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#market">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>3. الدراسة السوقية</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#technical-study">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>4. الدراسة الفنية</a></li>
+          </ul>
+        </div>
+        <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+          <ul class="space-y-4">
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#operational">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>5. الدراسة التشغيلية</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#financial">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>6. الدراسة المالية</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#risks">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>7. تحليل المخاطر</a></li>
+            <li><a class="text-neon-blue hover:text-neon-purple transition-colors duration-200 flex items-center" href="#references">
+              <i class="fas fa-chevron-right ml-2 text-sm"></i>8. المراجع</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- مقدمة المشروع -->
+    <div class="content-section" id="introduction">
+      <h2 class="section-title text-4xl mb-8" data-scroll="fade-left">
+        <span class="icon-wrapper">
+          <i class="fas fa-rocket"></i>
+        </span>
+        1. مقدمة المشروع
+      </h2>
+      <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+        <p class="text-gray-300 leading-relaxed">
+          مع التوسع الكبير في الصناعات والآلات والزيادة في الطلب على حلول التعبئة السريعة والدقيقة، أصبحت تقنيات التعبئة عاملاً أساسياً في تحسين جودة المنتج، وتقليل الهدر، وزيادة كفاءة الإنتاج.
+          واحدة من أبرز طرق التعبئة هي تعبئة العصا (Stick Pack) المستخدمة لتعبئة كميات صغيرة من السوائل أو المسحوق بطريقة عملية وموفرة.
+          على الرغم من توفر هذه التقنية في السوق، تعتمد معظم خطوط التعبئة الآلية على آلات مستوردة مكلفة أو تعبئة يدوية، مما يؤدي إلى محدودية في الكفاءة والإنتاجية في الآلات أحادية المسار التقليدية، مع ندرة الآلات متعددة المسارات المصنعة محليًا.
+        </p>
+      </div>
+      <!-- Investor / Study status note -->
+      <div class="highlight-box bg-yellow-700 bg-opacity-20 border border-yellow-600 p-6 rounded-lg shadow-lg text-white mt-6" data-scroll="fade-left">
+        <h4 class="font-semibold text-yellow-300 mb-3">ملاحظة للمستثمرين وجهات التمويل:</h4>
+        <p class="text-yellow-200 leading-relaxed">
+          هذه الوثيقة هي <em>دراسة جدوى أولية</em> أعدت لتقييم الجدوى الفنية والسوقية.
+          عند وجود اهتمام إيجابي أو موافقة مؤسسية، سنجري دراسة جدوى مفصلة كاملة: زيارات ميدانية، استبيانات ميدانية، تقديرات تكلفة دقيقة، عروض أسعار من الموردين، واختبار النموذج الأولي وسيتم إرفاقها بالدراسة الكاملة.
+        </p>
+      </div>
+      <div class="highlight-box bg-yellow-700 bg-opacity-20 border border-yellow-600 p-6 rounded-lg shadow-lg text-white mt-6" data-scroll="fade-left">
+        <h6 class="font-semibold text-yellow-300">ملاحظات حول سلسلة قيمة الطماطم وفاتورة الاستيراد السنوية:</h6>
+        <p class="text-sm text-gray-300">
+          تشير المناقشات الأخيرة في القطاع إلى حدوث فائض موسمي من الطماطم مع وجود نقص في قدرات المعالجة والتعبئة اللاحقة. على سبيل المثال، تشير التقارير إلى وجود نحو <strong>160–170 طن</strong> من مخزون الطماطم المعالجة مخزّنًا في مجمع معالجة (باجل) ولم يتم صرفه بالكامل. بالإضافة إلى ذلك، تكلف اليمن أكثر من 40 مليون دولار سنويًا لاستيراد معجون الطماطم والكاتشب من الخارج، رغم أن بلادنا تمتلك المتطلبات الأساسية التي قد تعفيها من فاتورة الاستيراد هذه. يبرز هذا الفجوات في الخدمات اللوجستية بعد الحصاد، والتعبئة، وروابط السوق التي يمكن لحلول التعبئة المحلية—مثل آلة VFFS متعددة المسارات المقترحة—المساعدة في معالجتها.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="card bg-dark-blue text-light p-6 rounded-lg shadow-lg" data-scroll="fade-in">
+          <h4 class="font-semibold text-neon-blue mb-4 text-xl">
+            <span class="icon-wrapper ml-3">
+              <i class="fas fa-lightbulb"></i>
+            </span>
+            1.1 فكرة المشروع
+          </h4>
+          <p class="text-gray-300 leading-relaxed">
+            يهدف المشروع إلى تصميم وتصنيع نموذج أولي لآلة تعبئة أوتوماتيكية متعددة المسارات لتعبئة المنتجات (سوائل أو مساحيق) وتغليفها في عبوات صغيرة (Stick Packs).
+            تعتمد الآلة على أنظمة ميكانيكية وهوائية للتحكم في حركة الفيلم، والختم، والملء، بالإضافة إلى نظام تحكم آلي باستخدام وحدة تحكم منطقية قابلة للبرمجة، وشاشة تفاعلية للعميل، ونظام إنترنت الأشياء لسهولة التحكم والمراقبة من أي مكان في العالم.
+            لحل مشكلة التعبئة اليدوية أو التعبئة الآلية البطيئة وغير الفعالة، من خلال إنشاء آلة ذات سعة إنتاجية عالية تعمل على مسارات متزامنة متعددة، مضاعفة كمية الإنتاج وتوفير الوقت، مع ضمان دقة التعبئة وجودة الختم.
+          </p>
+        </div>
+        <div class="card p-8" data-scroll="fade-in">
+          <h4 class="font-semibold text-neon-blue mb-4 text-xl">
+            <span class="icon-wrapper ml-3">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            1.2 المشكلة التي يعالجها المشروع
+          </h4>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            المصانع المحلية، وخاصة الصغيرة والمتوسطة، تواجه عدة تحديات في عمليات التعبئة:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>انخفاض الإنتاجية بسبب الاعتماد على آلات أحادية المسار أو التعبئة اليدوية</li>
+            <li>ارتفاع تكاليف التشغيل بسبب استغراق الوقت واستهلاك المواد الخام</li>
+            <li>عدم القدرة على المنافسة مع المنتجات المستوردة بسبب ارتفاع التكلفة</li>
+            <li>تقليل الاعتماد على الاستيراد وتشجيع التصنيع المحلي</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card p-8 mb-8" data-scroll="fade-in">
+        <h4 class="font-semibold text-neon-purple mb-6 text-xl">
+          <span class="icon-wrapper ml-3">
+            <i class="bx bx-target-lock"></i>
+          </span>
+          1.3 أهداف المشروع
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+            <h5 class="font-semibold text-neon-blue mb-4 text-lg">الأهداف الفنية</h5>
+            <ul class="text-sm text-gray-400 space-y-3 text-right">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-blue mr-2 mt-1"></i>
+                تصميم آلة بثلاثة مسارات متوازية لزيادة الإنتاجية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-blue mr-2 mt-1"></i>
+                تحقيق دقة تعبئة بنسبة خطأ ±1%
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-blue mr-2 mt-1"></i>
+                نظام تحكم آلي (وحدة تحكم منطقية قابلة للبرمجة + واجهة تشغيل)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-blue mr-2 mt-1"></i>
+                التصميم وفق معايير الصناعة باستخدام مواد من الفولاذ المقاوم للصدأ
+              </li>
+            </ul>
+          </div>
+          <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+            <h5 class="font-semibold text-neon-green mb-4 text-lg">أهداف الإنتاج</h5>
+            <ul class="text-sm text-gray-400 space-y-3 text-right">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-green mr-2 mt-1"></i>
+                تنويع المنتجات (سوائل ومساحيق)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-green mr-2 mt-1"></i>
+                سرعة إنتاج 90-200 عبوة/دقيقة مقارنة بـ 30-40 في الآلات أحادية المسار
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-green mr-2 mt-1"></i>
+                توفير 30-60% من وقت التعبئة مقارنة بالطرق التقليدية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-green mr-2 mt-1"></i>
+                تقليل هدر المواد الخام بفضل دقة التعبئة العالية
+              </li>
+            </ul>
+          </div>
+          <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+            <h5 class="font-semibold text-neon-pink mb-4 text-lg">الأهداف التسويقية</h5>
+            <ul class="text-sm text-gray-400 space-y-3 text-right">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-pink mr-2 mt-1"></i>
+                توفير آلة بتكلفة أقل بنسبة 40-50% من الآلات المستوردة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-pink mr-2 mt-1"></i>
+                تصنيع محلي يوفر آلة عالية الكفاءة تنافس المستورد بسعر أقل
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-pink mr-2 mt-1"></i>
+                تقليل الاعتماد على الاستيراد وتشجيع التصنيع المحلي
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-neon-pink mr-2 mt-1"></i>
+                تمكين المصانع الصغيرة من المنافسة بمنتجات عالية الجودة
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="stats-card bg-dark-blue p-6 rounded-lg shadow-md" data-scroll="fade-in">
+          <h5 class="font-semibold text-neon-yellow mb-4 text-lg">الأهداف التعليمية</h5>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ul class="text-sm text-gray-400 space-y-2 text-right">
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                تطبيق المعرفة في ميكانيكا الحركة، والهندسة الميكاترونية، والتحكم الآلي
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                التمكن من نمذجة وتصميم ثلاثي الأبعاد
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                تطوير نظام تحكم منطقي قابل للبرمجة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                اختيار ودمج المستشعرات والمحركات
+              </li>
+            </ul>
+            <ul class="text-sm text-gray-400 space-y-2 text-right">
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                إعداد دراسات فنية وتسويقية ومالية وتشغيلية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                إدارة المشروع والتوثيق الاحترافي
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap text-neon-yellow mr-2 mt-1"></i>
+                تحليل المخاطر وضمان الجودة
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card p-8" data-scroll="fade-in">
+        <h4 class="font-semibold text-neon-purple mb-6 text-xl">
+          <span class="icon-wrapper ml-3">
+            <i class="fas fa-star"></i>
+          </span>
+          1.4 أهمية المشروع
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-purple mb-4 text-lg">الأهمية الاقتصادية</h5>
+            <ul class="text-sm text-gray-300 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-leaf text-neon-green mr-2 mt-1"></i>
+                الاستغلال الأمثل لمواردنا الطبيعية من خلال تفعيل الصناعة التحويلية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-dollar-sign text-neon-green mr-2 mt-1"></i>
+                توفير بديل محلي منخفض التكلفة للآلات المستوردة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-chart-line text-neon-green mr-2 mt-1"></i>
+                زيادة الإنتاجية عبر التعبئة متعددة المسارات (3-6 مسارات تعمل بالتوازي)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-users text-neon-green mr-2 mt-1"></i>
+                تقليل الاعتماد على العمل اليدوي المكلف وغير الدقيق
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-trophy text-neon-green mr-2 mt-1"></i>
+                تمكين المصانع الصغيرة من المنافسة بمنتجات عالية الجودة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-handshake text-neon-green mr-2 mt-1"></i>
+                تشجيع المستثمرين على الدخول في مجال تصنيع آلات التعبئة
+              </li>
+            </ul>
+          </div>
+          <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-purple mb-4 text-lg">الأهمية الصناعية والبيئية</h5>
+            <ul class="text-sm text-gray-300 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-industry text-neon-blue mr-2 mt-1"></i>
+                تلبية احتياجات المصانع التي تعتمد على تعبئة Stick Pack
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-shield-alt text-neon-blue mr-2 mt-1"></i>
+                ضمان جودة التعبئة، والختم المحكم، والتوزيع الدقيق للمنتج
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-tools text-neon-blue mr-2 mt-1"></i>
+                توفير قطع غيار محليًا، مما يسهل الصيانة ويقلل التكاليف
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-arrow-up text-neon-blue mr-2 mt-1"></i>
+                تحسين كفاءة المصانع المحلية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-leaf text-neon-green mr-2 mt-1"></i>
+                تقليل الهدر الناتج عن التعبئة اليدوية غير الدقيقة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-neon-green mr-2 mt-1"></i>
+                إمكانية استخدام مواد تغليف صديقة للبيئة
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-compress text-neon-green mr-2 mt-1"></i>
+                تقليل كمية البلاستيك المستخدمة
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+          <h5 class="font-semibold text-neon-purple mb-4 text-lg">الأهمية الاجتماعية</h5>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ul class="text-sm text-gray-300 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-home text-neon-pink mr-2 mt-1"></i>
+                تلبية حاجة المجتمع لعبوات صغيرة مناسبة للاستهلاك الفردي اليومي
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-heart text-neon-pink mr-2 mt-1"></i>
+                توفير خيارات تعبئة متنوعة تلبي احتياجات الأسر ذات الدخل المنخفض
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-child text-neon-pink mr-2 mt-1"></i>
+                توفير منتجات سهلة الفتح والاستخدام للأطفال وكبار السن
+              </li>
+            </ul>
+            <ul class="text-sm text-gray-300 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-dollar-sign text-neon-pink mr-2 mt-1"></i>
+                تقليل فاتورة الاستيراد الوطنية
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-brain text-neon-pink mr-2 mt-1"></i>
+                تعزيز ثقافة الاستهلاك الذكي عن طريق تقليل هدر الطعام
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-briefcase text-neon-pink mr-2 mt-1"></i>
+                خلق فرص عمل من خلال توفير وظائف فنية في التصنيع والتشغيل وصيانة الآلات
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- الوصف الفني -->
+    <div class="content-section" id="technical">
+      <h2 class="section-title text-4xl mb-8" data-scroll="fade-left">
+        <span class="icon-wrapper">
+          <i class="fas fa-cogs"></i>
+        </span>
+        2. الوصف الفني للمشروع
+      </h2>
+      <div class="highlight-box bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+        <h3 class="text-2xl font-semibold text-neon-purple mb-4">مكونات آلة التعبئة</h3>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          تتكون الآلة من نظام تعبئة ونظام تغليف، بالإضافة إلى نظام تحكم ومراقبة، يحتوي كل منهما على عدة مكونات أساسية تعمل معًا لإكمال عملية التعبئة والتغليف.
+        </p>
+      </div>
+      <!-- Packaging System Components -->
+      <div class="mb-8">
+        <h4 class="text-2xl font-semibold text-gray-200 mb-6">
+          <span class="icon-wrapper ml-3">
+            <i class="fas fa-puzzle-piece"></i>
+          </span>
+          2.1 مكونات نظام التعبئة
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Film Roll Unwind Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-blue mb-4 text-lg">2.1.1 وحدة فك بكرة الفيلم</h5>
+            <img alt="Film Roll Unwind System" class="photo-placeholder" src="images/film-roll-unwind-system.jpg" />
+            <p class="text-sm text-gray-400 mb-4">
+              عمود يحمل بكرة الفيلم مع نظام فرامل للتحكم في الشد ومستشعر نهاية اللفة
+            </p>
+            <div class="mt-4">
+              <h6 class="font-semibold text-gray-300 mb-2">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400 mb-3">
+                يوفر الفيلم الخام بشكل مستمر مع شد مناسب، مع إنذار مبكر عند نفاد المادة
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300 mb-2">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يوفر شريط الفيلم مع شد مثالي للمراحل التالية، مما يضمن عملية تعبئة وتغليف سلسة
+              </p>
+            </div>
+          </div>
+          <!-- Dancer Roller Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-4 text-lg">2.1.2 وحدة بكرة التعويض (Dancer Roller)</h5>
+            <img alt="Dancer Roller System" class="photo-placeholder" src="images/dancer-roller-system.jpg" />
+            <p class="text-sm text-gray-400 mb-4">
+              ذراع متحرك يمتص التغيرات المفاجئة في شد الفيلم
+            </p>
+            <div class="mt-4">
+              <h6 class="font-semibold text-gray-300 mb-2">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400 mb-3">
+                تعمل كعازل للفيلم لامتصاص الصدمات الناتجة عن تغيرات سرعة سحب الفيلم
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300 mb-2">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن وصول الفيلم إلى مراحل التعبئة والختم بشد مثالي يؤثر مباشرة على دقة حجم العبوة وجودة الختم
+              </p>
+            </div>
+          </div>
+          <!-- Registration & Guide Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.3 وحدة التسجيل والتوجيه</h5>
+            <img alt="Registration &amp; Guide System" class="photo-placeholder" src="images/registration-guide-system.jpg" />
+            <p class="text-sm text-gray-400">
+              بكرات توجيه مع محرك سيرفو ومستشعر بصري لقراءة علامة التسجيل
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• يكتشف المستشعر علامة التسجيل على الفيلم</li>
+                <li>• ينشط المحرك لسحب الفيلم بعيدًا عن علامة التسجيل</li>
+                <li>• يعيد الحمل إلى وضع الاستعداد</li>
+              </ul>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن تقدم الفيلم بدقة وفقًا للمسافات المطلوبة لكل عملية طباعة أو قطع أو طي
+              </p>
+            </div>
+          </div>
+          <!-- Slitting Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.4 وحدة التقطيع الطولي (Slitting)</h5>
+            <img alt="Film Slitter" class="photo-placeholder" src="images/film-slitter.jpg" />
+            <p class="text-sm text-gray-400">
+              عجلة قطع لقطع الفيلم طولياً إلى شريطين متساويين
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                قطع الفيلم طولياً دون تمزق
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن تحضير شريطين من الفيلم لمرحلة الطي وإدخال أنابيب التعبئة
+              </p>
+            </div>
+          </div>
+          <!-- Folding Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.5 وحدة الطي</h5>
+            <img alt="Folding Unit" class="photo-placeholder" src="images/folding-unit.jpg" />
+            <p class="text-sm text-gray-400">
+              مجموعة بكرات تشكل مسارًا يشبه الحرف "V" لطَي الفيلم
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• تقسيم الفيلم إلى طبقتين متطابقتين خاليتين من التجاعيد</li>
+                <li>• الحفاظ على توازنهما ومحاذاتهما</li>
+              </ul>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن وصول الطبقتين أمام رؤوس التعبئة في نفس الوقت وبالدقة المطلوبة
+              </p>
+            </div>
+          </div>
+          <!-- Printing Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.6 وحدة الطباعة والتسجيل</h5>
+            <img alt="Print &amp; Registration Tunnel" class="photo-placeholder" src="images/print-registration-tunnel.jpg" />
+            <p class="text-sm text-gray-400">
+              نظام طباعة ذكي يطبع بيانات المنتج في الزمن الحقيقي
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• يكتشف المستشعر علامة التسجيل ويرسل إشارة إلى PLC</li>
+                <li>• ينشط الطابعة لطباعة البيانات في اللحظة المناسبة متزامنة مع إشارة المستشعر</li>
+              </ul>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن الطباعة المتزامنة في الموقع المحدد قبل مرحلة التعبئة والختم
+              </p>
+            </div>
+          </div>
+          <!-- Vertical Sealing Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.7 وحدة الختم الطولي</h5>
+            <img alt="Vertical Sealing Jaws" class="photo-placeholder" src="images/vertical-sealing-jaws.jpg" />
+            <p class="text-sm text-gray-400">
+              3 أزواج من الصفائح المسخنة لخلق ختم طولي محكم
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                تطبيق الحرارة والضغط لخلق ختم طولي محكم على طول الفيلم المشكل
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                بعد قطع الفيلم ووضعه فوق بعضه، تقوم هذه الوحدة بختم الحواف الطولية للفيلم مشكلة أنبوبًا مغلقًا من الجوانب جاهزًا للتعبئة
+              </p>
+            </div>
+          </div>
+          <!-- Pulling Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.8 وحدة السحب</h5>
+            <img alt="Pull Belts" class="photo-placeholder" src="images/pull-belts.jpg" />
+            <p class="text-sm text-gray-400">
+              زوج من البكرات المطاطية لسحب الفيلم عمودياً للأسفل
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يسحب الفيلم للأسفل بدقة لضمان طول العبوة المطلوب
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                تضمن هذه البكرات تقدم الفيلم بسلاسة وثبات عبر مراحل التعبئة والختم، مما يؤثر مباشرة على دقة حجم العبوة وجودة الختم
+              </p>
+            </div>
+          </div>
+          <!-- Horizontal Sealing Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.9 وحدة الختم العرضي</h5>
+            <img alt="Horizontal Sealing Jaws" class="photo-placeholder" src="images/horizontal-sealing-jaws.jpg" />
+            <p class="text-sm text-gray-400">
+              زوج من الصفائح المسخنة المتحركة لخلق ختم عرضي
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يخلق رابطًا عرضيًا محكمًا يعزل العبوات عن بعضها
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يتم إغلاق العبوات من الأعلى بعد التعبئة، وتجهيز العبوات التالية للإغلاق من الأسفل، معزولة عن العبوات المملوءة
+              </p>
+            </div>
+          </div>
+          <!-- Cutting Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.10 وحدة القطع</h5>
+            <img alt="Cutting Mechanism" class="photo-placeholder" src="images/cutting-mechanism.jpg" />
+            <p class="text-sm text-gray-400">
+              سكين حاد يفصل العبوات المعبأة عن بكرة الفيلم المستمرة
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يفصل العبوات المملوءة بشكل نظيف ودقيق
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن فصل العبوات بشكل فردي بعد اكتمال عملية التعبئة والختم
+              </p>
+            </div>
+          </div>
+          <!-- Outfeed Conveyor Unit -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-blue mb-3">2.1.11 وحدة الناقل الخارجي</h5>
+            <img alt="Outfeed Conveyor" class="photo-placeholder" src="images/outfeed-conveyor.jpg" />
+            <p class="text-sm text-gray-400">
+              حزام ناقل يستلم العبوات المملوءة والمقطوعة
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                ينقل المنتجات النهائية بعيدًا عن منطقة العمل
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن استمرارية تدفق الإنتاج ويمنع تراكم العبوات عند مخرج الآلة
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Filling System Components -->
+      <div class="mb-8">
+        <h4 class="text-xl font-semibold text-gray-200 mb-4">
+          <i class="fas fa-flask mr-2"></i>2.2 مكونات نظام التعبئة بالسوائل
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Supply Tank -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-green mb-3">2.2.1 خزان الإمداد</h5>
+            <img alt="Supply Tank" class="photo-placeholder" src="images/supply-tank.jpg" />
+            <p class="text-sm text-gray-400">
+              وعاء مخروطي كبير من الفولاذ المقاوم للصدأ لتخزين السوائل
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يعمل كخزان مؤقت للسوائل، ويضمن إمدادًا مستمرًا ومنتظمًا لوحدة التعبئة
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن توفر كمية كافية من السائل للتعبئة المستمرة، ويمنع انقطاع تدفق المنتج إلى النظام
+              </p>
+            </div>
+          </div>
+          <!-- Linear Servo Motor -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-green mb-3">2.2.2 محرك سيرفو خطي</h5>
+            <img alt="Linear Servo Motor" class="photo-placeholder" src="images/linear-servo-motor.jpg" />
+            <p class="text-sm text-gray-400">
+              محرك كهربائي يوفر حركة خطية دقيقة ومتحكم بها
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يحول الطاقة الكهربائية إلى حركة خطية مباشرة دون الحاجة إلى مكونات ميكانيكية وسيطة
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يتحكم في حركة الأسطوانات وأنابيب التعبئة، مما يسمح بقياس كميات السائل بدقة عالية
+              </p>
+            </div>
+          </div>
+          <!-- Piston Cylinders -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-green mb-3">2.2.3 أسطوانات مكبسية</h5>
+            <img alt="Piston Cylinders" class="photo-placeholder" src="images/piston-cylinders.jpg" />
+            <p class="text-sm text-gray-400">
+              أسطوانات معدنية دقيقة مع مكابس متحركة بداخلها
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                عند سحب المكبس للخلف داخل الأسطوانة، يتم سحب السائل من خزان الإمداد عبر صمام الشفط
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يعمل بالتنسيق مع المحركات السيرفو لقياس الحجم الدقيق للسائل المعبأ في كل عبوة
+              </p>
+            </div>
+          </div>
+          <!-- Liquid Manifold -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-green mb-3">2.2.4 مجمع السوائل (Manifold)</h5>
+            <img alt="Liquid Manifold" class="photo-placeholder" src="images/liquid-manifold.jpg" />
+            <p class="text-sm text-gray-400">
+              قطعة توزع السائل من المضخة الرئيسية إلى أنابيب التعبئة
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                يعمل كمركز تجميع وتوزيع، يستقبل السائل من مصدر واحد أو أكثر ويقسمه إلى مسارات متعددة
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يضمن حصول كل خط تعبئة على نفس كمية السائل في نفس الوقت
+              </p>
+            </div>
+          </div>
+          <!-- Filling Nozzles -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-green mb-3">2.2.5 فوهات التعبئة</h5>
+            <img alt="Filling Nozzles" class="photo-placeholder" src="images/filling-nozzles.jpg" />
+            <p class="text-sm text-gray-400">
+              أنابيب من الفولاذ المقاوم للصدأ لتوصيل السائل داخل العبوات
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل الفردي:</h6>
+              <p class="text-xs text-gray-400">
+                توجه السائل بدقة إلى العبوات، بتصميم يقلل من الرغوة أو تناثر السائل أثناء التعبئة
+              </p>
+            </div>
+            <div class="mt-2">
+              <h6 class="font-semibold text-gray-300">مبدأ العمل في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                يتم إدخالها بين طبقات الفيلم المغلق قبل عملية الختم العرضي
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Control & Monitoring System Components -->
+      <div class="mb-8">
+        <h4 class="text-xl font-semibold text-gray-200 mb-4">
+          <i class="fas fa-cogs mr-2"></i>2.3 مكونات نظام التحكم والمراقبة
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- المستشعرات -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-green mb-3">2.3.1 المستشعرات</h5>
+            <img alt="المستشعرات Array" class="photo-placeholder" src="images/sensors-array.jpg" />
+            <p class="text-sm text-gray-400">
+              مستشعرات القرب، علامة التسجيل، مستوى السائل، ومستشعرات درجة الحرارة
+            </p>
+            <div class="mt-3">
+              <h6 class="font-semibold text-gray-300">فوائدها في الآلة:</h6>
+              <p class="text-xs text-gray-400">
+                تعمل كـ"عيون" و"آذان" الآلة، توفر لنظام التحكم بيانات مستمرة عن حالة الآلة
+              </p>
+            </div>
+          </div>
+          <!-- نظام التحكم -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-green mb-3">2.3.2 نظام التحكم</h5>
+            <img alt="نظام التحكم" class="photo-placeholder" src="images/control-system.jpg" />
+            <p class="text-sm text-gray-400">
+              PLC + HMI + إنترنت الأشياء للتحكم الآلي والمراقبة عن بعد
+            </p>
+          </div>
+          <!-- المحركات -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-left">
+            <h5 class="font-semibold text-neon-green mb-3">2.3.3 المحركات</h5>
+            <img alt="المحركات Assembly" class="photo-placeholder" src="images/motors-assembly.jpeg" />
+            <p class="text-sm text-gray-400">
+              محركات سيرفو ومحركات خطوة لتحريك المكونات المختلفة
+            </p>
+          </div>
+          <!-- النظام الهوائي -->
+          <div class="highlight-box highlight-box-bottom bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg shadow-lg text-white" data-scroll="fade-right">
+            <h5 class="font-semibold text-neon-green mb-3">2.3.4 النظام الهوائي</h5>
+            <img alt="النظام الهوائي" class="photo-placeholder" src="images/pneumatic-system.jpg" />
+            <p class="text-sm text-gray-400">
+              أسطوانات هوائية وصمامات للتحكم في الحركة والإغلاق
+            </p>
+          </div>
+        </div>
+        <!-- Integrated Workflow -->
+        <div class="bg-gray-800 p-6 rounded-lg mb-6" data-scroll="fade-in">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4">
+            <i class="fas fa-project-diagram mr-2"></i>2.4 مراحل سير العمل باختصار
+          </h4>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                1
+              </div>
+              <p class="text-gray-300">
+                فك بكرة الفيلم وإرشادها عبر نظام تحكم الشد
+              </p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                2
+              </div>
+              <p class="text-gray-300">
+                تشكيل العبوة عبر تقطيع الفيلم وطيه وختم الحواف الطولية
+              </p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                3
+              </div>
+              <p class="text-gray-300">
+                الختم العرضي أثناء الملء بالتزامن عبر ضخ السائل من خزان الإمداد إلى فوهات التعبئة
+              </p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                4
+              </div>
+              <p class="text-gray-300">
+                القطع لفصل العبوات المملوءة
+              </p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-neon-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                5
+              </div>
+              <p class="text-gray-300">
+                خروج المنتج عبر حزام ناقل
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Liquid Types -->
+        <div class="bg-blue-900 bg-opacity-50 p-6 rounded-lg" data-scroll="fade-in">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4">
+            <i class="fas fa-tint mr-2"></i>2.5 أنواع السوائل التي يمكن تعبئتها
+          </h4>
+          <p class="text-gray-300 mb-4">
+            يمكن للآلة التعامل مع مجموعة واسعة من المنتجات السائلة حسب نظام التعبئة المستخدم:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-gray-800 p-4 rounded-lg shadow">
+              <h5 class="font-semibold text-neon-blue mb-2">سوائل منخفضة اللزوجة</h5>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>• الماء والعصائر</li>
+                <li>• الحليب والزيوت الخفيفة</li>
+                <li>• المشروبات الغازية</li>
+              </ul>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow">
+              <h5 class="font-semibold text-neon-green mb-2">سوائل متوسطة اللزوجة</h5>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>• الصلصات الخفيفة</li>
+                <li>• الشامبو والمنظفات السائلة</li>
+                <li>• المستحضرات الصيدلانية السائلة</li>
+              </ul>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow">
+              <h5 class="font-semibold text-neon-pink mb-2">سوائل عالية اللزوجة</h5>
+              <ul class="text-sm text-gray-400 space-y-1">
+                <li>• الكاتشب والمايونيز</li>
+                <li>• الزبادي والعسل</li>
+                <li>• الشوكولاتة السائلة ومعجون الأسنان</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- الدراسة السوقية -->
+      <div class="mb-12" id="market">
+        <h2 class="section-title text-4xl mb-8" data-scroll="fade-left">
+          <i class="fas fa-chart-line mr-2 text-red-500"></i>3. الدراسة السوقية
+        </h2>
+        <div class="bg-red-900 bg-opacity-30 p-6 rounded-lg mb-6" data-scroll="fade-in">
+          <p class="text-gray-300">
+            تهدف هذه الدراسة إلى تحليل حاجة السوق اليمني لآلات تعبئة السوائل، وتقدير الطلب المحتمل، وتقييم المنافسة، واستكشاف فرص النجاح.
+          </p>
+        </div>
+        <!-- الفئة المستهدفة -->
+        <div class="mb-8" data-scroll="fade-in">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-users mr-2"></i>3.1 الفئة المستهدفة
+          </h4>
+          <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow mb-6">
+            <p class="text-gray-300 mb-4">
+              استنادًا إلى بيانات اتحاد غرف التجارة والصناعة اليمني والاتحادات الصناعية الإقليمية:
+            </p>
+            <ul class="text-gray-300 space-y-2">
+              <li>• يوجد أكثر من 33,000 منشأة صناعية تعمل في اليمن</li>
+              <li>• تمثل الصناعات 47% من الناتج المحلي الإجمالي</li>
+              <li>• العديد منها يتركز في قطاع تصنيع الأغذية والمشروبات</li>
+              <li>• في المدن الرئيسية:</li>
+              <li class="ml-6">- محلات العصائر والمشروبات (تعبئة يومية 100-250 مل): صنعاء (250 محلًا)، تعز (180 محلًا)، عدن (150 محلًا)</li>
+              <li class="ml-6">- ورش تعبئة المياه والمنظفات والزيوت العطرية: إب (70 منشأة)، الحديدة (50 منشأة)، ذمار (40 منشأة)</li>
+              <li class="ml-6">- مشاريع منزلية صغيرة (عسل، ماء الورد، زيوت عطرية)</li>
+            </ul>
+          </div>
+          <!-- Geographic Distribution Chart -->
+          <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow mb-6" data-scroll="fade-in">
+            <h5 class="font-semibold text-red-400 mb-3">التوزيع الجغرافي للمنشآت المستهدفة</h5>
+            <div class="chart-container">
+              <canvas id="targetChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- حجم الطلب المتوقع -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-chart-bar mr-2"></i>3.2 حجم الطلب المتوقع
+          </h4>
+          <div class="table-responsive mb-6">
+            <table class="w-full">
+              <thead>
+                <tr>
+                  <th>المحافظة</th>
+                  <th>المنشآت المقدرة</th>
+                  <th>معدل الاختراق</th>
+                  <th>الآلات المتوقعة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>صنعاء</td>
+                  <td>250</td>
+                  <td>2%</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>تعز</td>
+                  <td>180</td>
+                  <td>2%</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>عدن</td>
+                  <td>150</td>
+                  <td>2%</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>إب</td>
+                  <td>70</td>
+                  <td>2%</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>الحديدة</td>
+                  <td>50</td>
+                  <td>2%</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>ذمار</td>
+                  <td>40</td>
+                  <td>2%</td>
+                  <td>1</td>
+                </tr>
+                <tr class="bg-gray-700 font-semibold">
+                  <td>المجموع</td>
+                  <td>740</td>
+                  <td>—</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Expected Demand Chart -->
+          <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+            <h5 class="font-semibold text-red-400 mb-3">الطلب المتوقع حسب المحافظات</h5>
+            <div class="chart-container">
+              <canvas id="demandChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- المنافسون في السوق -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-trophy mr-2"></i>3.3 المنافسون في السوق
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg">
+              <h5 class="font-semibold text-yellow-400 mb-3">محلي</h5>
+              <ul class="text-sm text-yellow-300 space-y-2">
+                <li>• ورش حرفية تنتج آلات يدوية</li>
+                <li>• السعر: 100-200 دولار</li>
+                <li>• تفتقر إلى الأتمتة والدقة</li>
+              </ul>
+            </div>
+            <div class="bg-red-900 bg-opacity-30 border border-red-700 p-6 rounded-lg">
+              <h5 class="font-semibold text-red-400 mb-3">مستورد</h5>
+              <ul class="text-sm text-red-300 space-y-2">
+                <li>• آلات VFFS متعددة المسارات</li>
+                <li>• السعر: 12,000-20,000 دولار قبل الجمارك</li>
+                <li>• تصل إلى 16,000-28,000 دولار بعد الرسوم</li>
+              </ul>
+            </div>
+            <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+              <h5 class="font-semibold text-green-400 mb-3">ميزتنا التنافسية</h5>
+              <ul class="text-sm text-green-300 space-y-2">
+                <li>• سعر البيع المقترح: 6,000-7,000 دولار</li>
+                <li>• دعم فني محلي فوري</li>
+                <li>• تصميم مخصص للسوق المحلي</li>
+              </ul>
+            </div>
+          </div>
+          <!-- مخطط مقارنة الأسعار -->
+          <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+            <h5 class="font-semibold text-red-400 mb-3">مقارنة الأسعار التنافسية</h5>
+            <div class="chart-container">
+              <canvas id="priceChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- فرص المشروع -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-bullseye mr-2"></i>3.4 فرص المشروع
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg">
+              <h5 class="font-semibold text-blue-400 mb-3">الفرص الاقتصادية</h5>
+              <ul class="text-sm text-blue-300 space-y-2">
+                <li>• تكلفة التصنيع المحلي: 5,000-6,000 دولار</li>
+                <li>• البيع بسعر يوفر للعميل 60-75%</li>
+                <li>• خدمة ما بعد البيع سريعة</li>
+              </ul>
+            </div>
+            <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+              <h5 class="font-semibold text-purple-400 mb-3">الفرص السوقية</h5>
+              <ul class="text-sm text-purple-300 space-y-2">
+                <li>• مواسم الذروة: رمضان، الصيف، الأعياد</li>
+                <li>• شراكات مع غرف التجارة</li>
+                <li>• التركيز على المدن الرئيسية</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- الملخص والتوصيات -->
+        <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+          <h4 class="text-xl font-semibold text-green-400 mb-4" data-scroll="fade-right">
+            <i class="fas fa-check-circle mr-2"></i>3.5 الملخص والتوصيات
+          </h4>
+          <div class="space-y-3 text-green-300">
+            <p>
+              • للسوق اليمني حاجة حقيقية لآلات التعبئة الآلية
+            </p>
+            <p>
+              • نهدف لبيع 15 آلة في السنة الأولى مع التركيز على المدن الرئيسية
+            </p>
+            <p>
+              • يوصى بالشراكة مع اتحاد غرف التجارة والاتحادات الصناعية
+            </p>
+            <p>
+              • إمكانية توسيع السوق إلى البلدان المجاورة في المستقبل
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- الدراسة الفنية -->
+      <div class="mb-12" id="technical-study">
+        <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-indigo-500 pb-2" data-scroll="fade-left">
+          <i class="fas fa-microchip mr-2 text-indigo-500"></i>4. الدراسة الفنية
+        </h2>
+        <!-- Controller Type Selection -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-cpu mr-2"></i>4.1 اختيار نوع وحدة التحكم (PLC)
+          </h4>
+          <div class="bg-indigo-900 bg-opacity-30 border border-indigo-700 p-6 rounded-lg mb-6" data-scroll="fade-in">
+            <h5 class="font-semibold text-indigo-400 mb-3">في هذا المشروع يلزم استخدام وحدة تحكم منطقية مبرمجة (PLC) لتنفيذ تسلسل العمليات الأوتوماتيكية الخاصة بآلة تعبئة السوائل.</h5>
+            <p class="text-indigo-300 mb-3">
+              يجب أن تحقق وحدة التحكم المواصفات والمتطلبات التالية:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h6 class="font-semibold text-indigo-300 mb-2">المتطلبات الوظيفية:</h6>
+                <ul class="text-sm text-indigo-200 space-y-1">
+                  <li> •عدد المداخل الرقمية (Digital Inputs): لا يقل عن 8 مداخل لتوصيل إشارات الحساسات المختلفة (حساس العلامة اللونية، الحساس الضوئي، الحساس الحثي، حساس وجود اللفة).</li>
+                  <li> •عدد المخارج الرقمية (Digital Outputs): لا يقل عن 4 مخارج للتحكم في المشغلات مثل محركات السحب، ريليهات اللحام، وصمامات التعبئة.</li>
+                  <li>• دعم المداخل التماثلية (Analog Inputs): لا يقل عن 2 مدخل لدعم حساسات الحرارة (RTD أو Thermocouple عبر محول إشارة).</li>
+                  <li>• إمكانية التوسع (Expansion): يجب أن تسمح الوحدة بإضافة وحدات إضافية مستقبلًا إذا استدعت الحاجة. </li>
+                  <li>• دعم الاتصال الصناعي: مثل Ethernet أو بروتوكول صناعي (PROFINET أو Modbus) لربطها بشاشة HMI أو أنظمة مراقبة عليا. </li>
+                  <li>• دعم الاتصال السحابي (Cloud Connectivity): بحيث يمكن مراقبة وتشغيل النظام عن بُعد عبر واجهة ويب أو تطبيق خاص، إذا رغبت المؤسسة في ذلك مستقبلًا. </li>
+                </ul>
+              </div>
+              <div>
+                <h6 class="font-semibold text-indigo-300 mb-2">المهام المطلوبة من وحدة الـPLC:</h6>
+                <ul class="text-sm text-indigo-200 space-y-1">
+                  <li>• تنفيذ تسلسل أوتوماتيكي لمراحل تشغيل الآلة (لحام – تعبئة – سحب).</li>
+                  <li>• قراءة إشارات الحساسات بدقة وضمان التزامن بين الوحدات الميكانيكية.</li>
+                  <li>• التحكم في التوقيت الزمني بين العمليات لمنع أي تداخل أو توقف مفاجئ.</li>
+                  <li>• إصدار تنبيهات في حال حدوث أعطال أو نفاد لفة الأكياس.</li>
+                  <li>• التكامل مع شاشة تشغيل HMI لعرض الحالة اللحظية والتحكم اليدوي أو الأوتوماتيكي.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- وصف نظام التحكم -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-cogs mr-2"></i>4.2 وصف نظام التحكم
+          </h4>
+          <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow" data-scroll="fade-in">
+            <p class="text-gray-300 mb-4">
+              يعتمد نظام التحكم على متحكم PLC لتنفيذ تسلسل أوتوماتيكي لمراحل تشكيل العبوة والتعبئة:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul class="text-sm text-gray-400 space-y-2">
+                <li>• تشكيل أنبوب من الفيلم البلاستيكي عبر طوق التشكيل، ثم ختم الحواف الجانبية عبر وحدة الختم الطولي</li>
+                <li>• إغلاق قاعدة العبوة الأولى باستخدام فكوك الختم العرضي</li>
+                <li>• ضخ السائل إلى العبوة عبر أنبوب التعبئة</li>
+                <li>• سحب الفيلم صفًا واحدًا في كل مرة باستخدام نظام السحب (محرك أو بكرات)</li>
+              </ul>
+              <ul class="text-sm text-gray-400 space-y-2">
+                <li>• إغلاق رأس العبوة السابقة وتشكيل قاعدة العبوة الجديدة في نفس لحظة الختم العرضي</li>
+                <li>• تكرار الدورة (الختم - التعبئة - السحب) تلقائيًا مع تزامن دقيق</li>
+                <li>• استخدام مستشعر بصري لقراءة العلامة المطبوعة على الفيلم وتحديد نقطة التوقف بدقة</li>
+                <li>• يتم التحكم بدقة في تسلسل التوقيت بين هذه المراحل بواسطة برنامج داخلي في وحدة PLC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Operation & Control Screen -->
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="fas fa-desktop mr-2"></i>4.3 شاشة التشغيل والتحكم (HMI)
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-left">
+              <h5 class="font-semibold text-blue-400 mb-3">المتطلبات العامة:</h5>
+              <ul class="text-sm text-blue-300 space-y-2">
+                <li>• شاشة تشغيل وتحكم تعمل باللمس (Touch Panel).</li>
+                <li>• حجم شاشة لا يقل عن 7 بوصة لتوفير عرض واضح للمشغل. </li>
+                <li>• دقة عرض مناسبة (على الأقل 800×480 بكسل) لعرض البيانات والرسوم بوضوح.</li>
+                <li>• دعم الاتصال عبر Ethernet / بروتوكول صناعي (مثل PROFINET أو Modbus) للتكامل مع وحدة الـPLC.</li>
+                <li>• إمكانية إنشاء واجهات تفاعلية باستخدام برنامج برمجة قياسي (مثل TIA Portal أو ما يعادله).</li>
+              </ul>
+            </div>
+            <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-right">
+              <h5 class="font-semibold text-green-400 mb-3">دعم العناصر التالية:</h5>
+              <ul class="text-sm text-green-300 space-y-2">
+                <li>• عرض حالة الحساسات والمشغلات في الوقت الفعلي.</li>
+                <li>• أزرار للتحكم اليدوي (تشغيل/إيقاف).</li>
+                <li>• تنبيهات ورسائل أخطاء في حال حدوث أعطال.</li>
+                <li>• إمكانية عرض رسومات أو مخططات بيانية عند الحاجة.</li>
+              </ul>
+            </div>
+            <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+              <h5 class="font-semibold text-yellow-400 mb-3">المهام المطلوبة من الـHMI:</h5>
+              <ul class="text-sm text-yellow-300 space-y-2">
+                <li>• بدء وإيقاف تشغيل الآلة بسهولة.</li>
+                <li>• مراقبة العملية الصناعية وعرض جميع البيانات المهمة للمشغل.</li>
+                <li>• إصدار تنبيهات واضحة عند حدوث خلل أو توقف في النظام.</li>
+                <li>• توفير واجهة سهلة الاستخدام ومتعددة اللغات لتقليل الأخطاء البشرية وتسريع التشغيل.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- المستشعرات المستخدمة -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+            <i class="bx bx-pulse"></i>4.4 المستشعرات المستخدمة
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-left">
+              <h5 class="font-semibold text-blue-400 mb-3">مستشعر العلامة اللونية (Color Mark Sensor)</h5>
+              <ul class="text-sm text-blue-300 space-y-2">
+                <li>• النوع: Color Mark Sensor – Reflective Type</li>
+                <li>• الشركة: مثل SICK أو Panasonic أو Keyence</li>
+                <li>• الوظيفة: الكشف عن علامات اللون الأسود المطبوعة على سطح الكيس لتحديد نقطة القطع أو التعبئة بدقة.</li>
+                <li>• آلية العمل: يعمل باستخدام ضوء LED (غالبًا أحمر أو أبيض) ويقوم بالكشف عن التباين اللوني بين العلامة السوداء وخلفية الكيس.</li>
+
+              </ul>
+            </div>
+            <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-right">
+              <h5 class="font-semibold text-green-400 mb-3">المستشعر الحثي (Inductive Proximity Sensor)</h5>
+              <ul class="text-sm text-green-300 space-y-2">
+                <li>• الوظيفة: التأكد من وصول المكبس الذي يسحب السائل إلى نهاية مشواره بدقة، أي عند أقصى نقطة تعبئة.</li>
+                <li>• الموقع: مثبت في أعلى الآلة، بجانب المكبس المتحرك الخاص بعملية السحب أو الدفع.</li>
+
+              </ul>
+            </div>
+            <div class="bg-red-900 bg-opacity-30 border border-red-600 p-6 rounded-lg" data-scroll="fade-left">
+              <h5 class="font-semibold text-red-300 mb-3">المستشعر الحراري (Thermocouple )</h5>
+              <ul class="text-sm text-red-200 space-y-2">
+                <li>•  النوع: K-Type Thermocouple Probe for sealing machine</li>
+                <li>•  الوظيفة: قياس درجة حرارة فكوك اللحام لضمان حرارة مناسبة أثناء التشغيل.</li>
+                <li>• او يمكن استخدامRTD  مثلا   PT100 RTD Probe</li>
+                <li>• نُفضّل استخدام حساس RTD بدلًا من Thermocouple لأنه أسهل في التوصيل مع وحدة PLC ، ويعطي إشارة خطية مستقرة دون الحاجة لتعويض حرارة باردة، كما أنه يوفر دقة جيدة في مدى الحرارة المطلوب (حتى 300°C).</li>
+              </ul>
+            </div>
+            <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+              <h5 class="font-semibold text-yellow-400 mb-3">مستشعر ضوئي للكشف عن وجود اللفّة</h5>
+              <ul class="text-sm text-yellow-300 space-y-2">
+                <li>• الاسم: حساس شعاع ضوئي مركّز (Focused Photoelectric Sensor)</li>
+                <li>• النوع: ضوئي عاكس (Reflex Light Beam Sensor) مثلا SICK WTB4-3P1361     </li>
+                <li>• مسافة الكشف الفعلية: تتراوح بين 30 إلى 80 ملم حسب مكان التثبيت</li>
+                <li>• الوظيفة:التحقق من وجود لفّة الأكياس البلاستيكية قبل بدء التشغيل ، إيقاف النظام في حالة نفاد اللفة، لتفادي التشغيل الخاطئ أو التالف.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- الدراسة التشغيلية -->
+        <div class="mb-12" id="operational">
+          <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-yellow-500 pb-2" data-scroll="fade-left">
+            <i class="fas fa-tools mr-2 text-yellow-500"></i>5. الدراسة التشغيلية
+          </h2>
+          <!-- آلية التشغيل -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-play-circle mr-2"></i>5.1 آلية التشغيل
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+                <h5 class="font-semibold text-yellow-400 mb-3">بدء تشغيل النظام</h5>
+                <ul class="text-sm text-yellow-300 space-y-2">
+                  <li>• تشغيل الطاقة</li>
+                  <li>• بدء النظام من لوحة التحكم أو شاشة HMI</li>
+                  <li>• التأكد من ظهور الإعدادات بشكل صحيح</li>
+                  <li>• ضبط المؤقتات وكميات المضخة حسب الحاجة</li>
+                </ul>
+              </div>
+              <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+                <h5 class="font-semibold text-purple-400 mb-3">التشغيل التجريبي</h5>
+                <ul class="text-sm text-purple-300 space-y-2">
+                  <li>• اختبار حركة الفيلم والتعبئة الفارغة لمدة 3-5 دقائق</li>
+                  <li>• مراقبة انتظام العمل وخلوه من الأخطاء</li>
+                  <li>• تصحيح أي أعطال قبل تشغيل المنتج الفعلي</li>
+                </ul>
+              </div>
+              <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-right">
+                <h5 class="font-semibold text-green-400 mb-3">التوثيق والمتابعة</h5>
+                <ul class="text-sm text-green-300 space-y-2">
+                  <li>• تسجيل عدد القطع المنتجة يوميًا</li>
+                  <li>• توثيق أي خلل أو توقف حدث أثناء التشغيل</li>
+                  <li>• فحص سجل الصيانة عند حدوث مشكلة متكررة</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- متطلبات التشغيل -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-clipboard-list mr-2"></i>5.2 متطلبات التشغيل
+            </h4>
+            <div class="space-y-6">
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-blue-400 mb-3">الطاقة الكهربائية</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• ضمان توفر مصدر طاقة مستقر (220-380 فولت حسب نوع الآلة)</li>
+                  <li>• فحص جميع الوصلات الكهربائية يوميًا</li>
+                </ul>
+              </div>
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-green-400 mb-3">الضغط الهوائي</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• ضمان ضغط هواء بين 5-6 بار</li>
+                  <li>• فحص التسريبات في الأنابيب أو الوصلات</li>
+                  <li>• تنظيف فلتر الهواء بانتظام</li>
+                </ul>
+              </div>
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-purple-400 mb-3">مواد التعبئة</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• التأكد من تثبيت اللفة بشكل صحيح وآمن</li>
+                  <li>• التحقق من وجود علامة مرجعية على الفيلم (Eye Mark)</li>
+                  <li>• ضمان سحب الفيلم بسلاسة دون انزلاق أو التواء</li>
+                </ul>
+              </div>
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-red-400 mb-3">تنظيف الأجزاء الملامسة</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• تنظيف مضخات التعبئة والأنابيب والسكاكين يوميًا</li>
+                  <li>• عدم ترك بقايا طعام أو سوائل على الأجزاء المتحركة</li>
+                  <li>• استخدام مواد تنظيف غير مسببة للتآكل</li>
+                </ul>
+              </div>
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-indigo-400 mb-3">فحص المستشعرات</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• اختبار عمل مستشعر علامة العين قبل البدء</li>
+                  <li>• التأكد من نظافة سطح المستشعر وخلوه من الغبار</li>
+                  <li>• فحص مفاتيح الحد في محرك الدفع أو مواضع الإيقاف</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- العمال والمشغلون المطلوبون -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-users mr-2"></i>5.3 العمال والمشغلون المطلوبون
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-right">
+                <h5 class="font-semibold text-blue-400 mb-3">مشغل الآلة</h5>
+                <p class="text-blue-300 mb-2">
+                  العدد: 1
+                </p>
+                <ul class="text-sm text-blue-200 space-y-1">
+                  <li>• بدء وإيقاف الآلة</li>
+                  <li>• ضبط السرعة وإعدادات التعبئة</li>
+                  <li>• مراقبة عمل المستشعرات والمضخات</li>
+                  <li>• التدخل عند حدوث أعطال فنية أو ميكانيكية</li>
+                </ul>
+              </div>
+              <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                <h5 class="font-semibold text-green-400 mb-3">مزود المواد الخام</h5>
+                <p class="text-green-300 mb-2">
+                  العدد: 1
+                </p>
+                <ul class="text-sm text-green-200 space-y-1">
+                  <li>• ملء خزان السائل أو المسحوق</li>
+                  <li>• وضع بكرة التغليف في مكانها</li>
+                  <li>• مراقبة مستوى المواد الخام داخل الخزان</li>
+                  <li>• استبدال الفيلم عند نفاد البكرة</li>
+                </ul>
+              </div>
+              <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg" data-scroll="fade-left">
+                <h5 class="font-semibold text-yellow-400 mb-3">جامع/مغلف المنتجات</h5>
+                <p class="text-yellow-300 mb-2">
+                  العدد: 1-2
+                </p>
+                <ul class="text-sm text-yellow-200 space-y-1">
+                  <li>• استلام العبوات بعد خروجها من الآلة</li>
+                  <li>• ترتيبها في صناديق أو حاويات</li>
+                  <li>• التأكد من خلوها من التسرب أو التمزق</li>
+                  <li>• التغليف الثانوي يدويًا أو باستخدام آلة تغليف ثانوية</li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="w-full">
+                <thead>
+                  <tr>
+                    <th>نوع الآلة</th>
+                    <th>العمال المطلوبون</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>شبه آلي</td>
+                    <td>2-3 عمال</td>
+                  </tr>
+                  <tr>
+                    <td>آلي بالكامل</td>
+                    <td>1-2 عامل فقط</td>
+                  </tr>
+                  <tr>
+                    <td>إنتاج مكثف &gt; 90 عبوة/دقيقة</td>
+                    <td>3-4 عمال (بما في ذلك عامل الجودة والتغليف)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Periodic Maintenance -->
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-wrench mr-2"></i>5.4 الصيانة الدورية
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h5 class="font-semibold text-red-400 mb-3">الصيانة اليومية</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• تنظيف الشفرات وبكرات الختم من بقايا الفيلم أو المنتج</li>
+                  <li>• تنظيف رؤوس التعبئة (الفوهات) والأنابيب لمنع الانسداد</li>
+                  <li>• فحص الوصلات الكهربائية والهوائية</li>
+                  <li>• اختبار مستشعر علامة العين والتأكد من استجابته</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-red-400 mb-3">الصيانة الأسبوعية</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• تزييت الأجزاء المتحركة (إذا كانت هناك نقاط تزييت)</li>
+                  <li>• فحص شد السكاكين القاطعة وتركيبها</li>
+                  <li>• معايرة مستشعرات علامة العين ومفاتيح الحد</li>
+                  <li>• تنظيف فلاتر الهواء من الغبار أو الزيت</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-blue-400 mb-3">الصيانة الشهرية</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• فحص جميع محركات الخطوة والسيرفو للحرارة والصوت</li>
+                  <li>• فحص سلامة الكابلات الكهربائية (للتلف أو القطع)</li>
+                  <li>• قياس دقة التعبئة بميزان إلكتروني (لضمان ثبات الحجم)</li>
+                  <li>• تنظيف شامل للآلة (بما في ذلك داخل الإطار)</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-purple-400 mb-3">الصيانة الربع سنوية</h5>
+                <ul class="text-sm text-gray-400 space-y-1">
+                  <li>• إعادة معايرة جميع المستشعرات والأنظمة الإلكترونية</li>
+                  <li>• فحص حالة لوحة التحكم HMI وتحديث البرنامج إذا كان متاحًا</li>
+                  <li>• تغيير أنابيب التغذية (الأنابيب) إذا كانت قديمة أو متصلبة</li>
+                  <li>• فحص كفاءة عناصر التسخين (السخانات) واستبدال التالف منها</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- الدراسة المالية -->
+        <div class="mb-12" id="financial">
+          <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-green-500 pb-2" data-scroll="fade-left">
+            <i class="fas fa-chart-pie mr-2 text-green-500"></i>6. الدراسة المالية
+          </h2>
+          <!-- Project Cost -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-dollar-sign mr-2"></i>6.1 التكلفة التقريبية للمشروع
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-green-400 mb-3">التكاليف الثابتة</h5>
+                <div class="table-responsive">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr>
+                        <th>البند</th>
+                        <th>التكلفة ($)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>المكونات الميكانيكية</td>
+                        <td>2,000</td>
+                      </tr>
+                      <tr>
+                        <td>المكونات الكهربائية</td>
+                        <td>1,500</td>
+                      </tr>
+                      <tr>
+                        <td>نظام التحكم PLC+HMI</td>
+                        <td>800</td>
+                      </tr>
+                      <tr>
+                        <td>المستشعرات &amp; المحركات</td>
+                        <td>700</td>
+                      </tr>
+                      <tr class="bg-gray-700 font-semibold">
+                        <td>المجموع</td>
+                        <td>5,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+                <h5 class="font-semibold text-blue-400 mb-3">التكاليف المتغيرة</h5>
+                <div class="table-responsive">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr>
+                        <th>البند</th>
+                        <th>التكلفة الشهرية ($)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>العمالة</td>
+                        <td>250</td>
+                      </tr>
+                      <tr>
+                        <td>الكهرباء</td>
+                        <td>150</td>
+                      </tr>
+                      <tr>
+                        <td>الصيانة</td>
+                        <td>100</td>
+                      </tr>
+                      <tr class="bg-gray-700 font-semibold">
+                        <td>المجموع الشهري</td>
+                        <td>500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Cost Distribution Chart -->
+            <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+              <h5 class="font-semibold text-green-400 mb-3">توزيع التكاليف</h5>
+              <div class="chart-container">
+                <canvas id="costChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Expected Revenues -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-money-bill-wave mr-2"></i>6.2 الإيرادات المتوقعة
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg">
+                <h5 class="font-semibold text-green-400 mb-3">سيناريو متحفظ</h5>
+                <ul class="text-sm text-green-300 space-y-2">
+                  <li>• عدد الآلات المباعة: 10 آلات/سنة</li>
+                  <li>• سعر البيع: 6,500 دولار للآلة</li>
+                  <li>• إجمالي الإيرادات: 65,000 دولار</li>
+                  <li>• هامش الربح: 30%</li>
+                </ul>
+              </div>
+              <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg">
+                <h5 class="font-semibold text-blue-400 mb-3">سيناريو متوسط</h5>
+                <ul class="text-sm text-blue-300 space-y-2">
+                  <li>• عدد الآلات المباعة: 15 آلة/سنة</li>
+                  <li>• سعر البيع: 6,500 دولار للآلة</li>
+                  <li>• إجمالي الإيرادات: 97,500 دولار</li>
+                  <li>• هامش الربح: 35%</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Revenue Chart -->
+            <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow">
+              <h5 class="font-semibold text-green-400 mb-3">توقعات الإيرادات السنوية</h5>
+              <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Profitability Analysis -->
+          <div class="bg-gradient-to-r from-green-900 to-blue-900 p-6 rounded-lg">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-chart-line mr-2"></i>6.3 تحليل الربحية
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-green-400 mb-2">
+                  18 شهرًا
+                </div>
+                <p class="text-gray-400">
+                  فترة استرداد رأس المال
+                </p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-blue-400 mb-2">
+                  35%
+                </div>
+                <p class="text-gray-400">
+                  معدل العائد على الاستثمار
+                </p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg shadow text-center">
+                <div class="text-3xl font-bold text-purple-400 mb-2">
+                  $34,000
+                </div>
+                <p class="text-gray-400">
+                  صافي الربح السنوي المتوقع
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- تحليل المخاطر -->
+        <div class="mb-12" id="risks">
+          <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-red-500 pb-2" data-scroll="fade-left">
+            <i class="fas fa-exclamation-triangle mr-2 text-red-500"></i>7. تحليل المخاطر
+          </h2>
+          <div class="bg-red-900 bg-opacity-30 p-6 rounded-lg mb-6">
+            <p class="text-gray-300">
+              تحليل المخاطر جزء أساسي من دراسة الجدوى لأي مشروع صناعي، حيث يساعد في تحديد المشكلات المحتملة التي قد تواجه آلة التعبئة وتطوير استراتيجيات للتخفيف من تأثيرها.
+            </p>
+          </div>
+          <!-- Potential Malfunctions -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-bug mr-2"></i>7.1 الأعطال المحتملة
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-gray-800 border border-red-700 p-6 rounded-lg shadow" data-scroll="fade-left">
+                <h5 class="font-semibold text-red-400 mb-3">مشاكل ميكانيكية</h5>
+                <ul class="text-sm text-gray-400 space-y-2">
+                  <li>• مشاكل في الختم (ضعيف، غير مكتمل)</li>
+                  <li>• مشاكل في تغذية الفيلم (تشوه، تمزق)</li>
+                  <li>• عدم دقة التعبئة</li>
+                  <li>• مشاكل في القطع</li>
+                  <li>• تلف الأجزاء المتحركة</li>
+                </ul>
+              </div>
+              <div class="bg-gray-800 border border-red-700 p-6 rounded-lg shadow" data-scroll="fade-right">
+                <h5 class="font-semibold text-red-400 mb-3">مشاكل كهربائية</h5>
+                <ul class="text-sm text-gray-400 space-y-2">
+                  <li>• فشل المستشعرات</li>
+                  <li>• مشاكل في لوحة التحكم PLC</li>
+                  <li>• دوائر قصيرة</li>
+                  <li>• توقف المحركات</li>
+                  <li>• مشاكل في الوصلات الكهربائية</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Power Outage -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-power-off mr-2"></i>7.2 انقطاع التيار الكهربائي
+            </h4>
+            <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 p-6 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h5 class="font-semibold text-yellow-400 mb-3">التأثيرات المحتملة:</h5>
+                  <ul class="text-sm text-yellow-300 space-y-1">
+                    <li>• توقف مفاجئ للإنتاج</li>
+                    <li>• تلف المنتجات قيد المعالجة</li>
+                    <li>• تلف المعدات الحساسة</li>
+                    <li>• الحاجة إلى إعادة التشغيل</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-yellow-400 mb-3">الحلول المقترحة:</h5>
+                  <ul class="text-sm text-yellow-300 space-y-1">
+                    <li>• أنظمة إمداد طاقة غير منقطعة UPS</li>
+                    <li>• مولدات طاقة احتياطية</li>
+                    <li>• أنظمة إيقاف آمنة</li>
+                    <li>• بروتوكولات الطوارئ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Liquid Problems -->
+          <div class="mb-8">
+            <h4 class="text-xl font-semibold text-gray-200 mb-4" data-scroll="fade-right">
+              <i class="fas fa-flask mr-2"></i>7.3 مشاكل السوائل
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-blue-900 bg-opacity-30 border border-blue-700 p-6 rounded-lg" data-scroll="fade-right">
+                <h5 class="font-semibold text-blue-400 mb-3">المشاكل الشائعة</h5>
+                <ul class="text-sm text-blue-300 space-y-2">
+                  <li>• تغير اللزوجة</li>
+                  <li>• وجود جزيئات صلبة</li>
+                  <li>• تكوين رغوة</li>
+                  <li>• تآكل</li>
+                </ul>
+              </div>
+              <div class="bg-green-900 bg-opacity-30 border border-green-700 p-6 rounded-lg" data-scroll="fade-left">
+                <h5 class="font-semibold text-green-400 mb-3">الحلول المقترحة</h5>
+                <ul class="text-sm text-green-300 space-y-2">
+                  <li>• أنظمة التحكم في درجة الحرارة</li>
+                  <li>• فلاتر متقدمة</li>
+                  <li>• أنظمة تعبئة خاصة</li>
+                  <li>• مواد مقاومة للتآكل</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Programming & Control Errors -->
+          <div class="bg-purple-900 bg-opacity-30 border border-purple-700 p-6 rounded-lg">
+            <h4 class="text-xl font-semibold text-purple-400 mb-4">
+              <i class="fas fa-code mr-2"></i>7.4 أخطاء البرمجة والتحكم
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h5 class="font-semibold text-purple-300 mb-3">المخاطر:</h5>
+                <ul class="text-sm text-purple-200 space-y-1">
+                  <li>• عدم تزامن العمليات</li>
+                  <li>• أخطاء في الإعدادات</li>
+                  <li>• توقف الآلة دون تفسير</li>
+                  <li>• صعوبة في تشخيص الأعطال</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-purple-300 mb-3">الحلول:</h5>
+                <ul class="text-sm text-purple-200 space-y-1">
+                  <li>• اختبار شامل للبرمجيات</li>
+                  <li>• تدريب كافي للمشغلين</li>
+                  <li>• برامج الصيانة الوقائية</li>
+                  <li>• نسخ احتياطية للبرمجيات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- المراجع -->
+        <div class="mb-12" dir="ltr" id="references">
+          <h2 class="section-title text-3xl text-gray-200 mb-6 border-b-2 border-gray-500 pb-2" data-scroll="fade-left">
+            <i class="fas fa-book mr-2 text-gray-400"></i>8. المراجع
+          </h2>
+          <div class="bg-blue-900 p-6 rounded-lg">
+            <div class="space-y-8 text-sm text-red-600">
+
+              <div class="border-l-8 border-red-500 pl-8">
+                <p>
+                  <strong>NOTE:</strong> Some references may require a VPN to be enabled in order to access them. <a </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg">
+              <div class="space-y-4 text-sm text-gray-400">
+
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <p>
+                    <strong>[1]</strong> Vertical Form Fill Seal Machines. Viking Masek. link: <a href="https://vikingmasek.com/packaging-machine-resources/packaging-machine-blog/a-guide-to-vertical-form-fill-seal-machines" class="text-blue-400 hover:underline">https://vikingmasek.com/packaging-machine-resources/packaging-machine-blog/a-guide-to-vertical-form-fill-seal-machines</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <p>
+                    <strong>[2]</strong> VFFS Packaging Machine. Spack Machine. link: <a href="https://www.spackmachine.com/vffs-machines-guide-working-principle-types-filling-methods/" class="text-blue-400 hover:underline">https://www.spackmachine.com/vffs-machines-guide-working-principle-types-filling-methods/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[3]</strong> VFFS Machines. GEA. link: <a href="https://www.gea.com/en/products/vffs-machines.jsp" class="text-blue-400 hover:underline">https://www.gea.com/en/products/vffs-machines.jsp</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                  <p>
+                    <strong>[4]</strong> Vertical Form Fill Seal Machines. TNA Solutions. link: <a href="https://www.tnasolutions.com/products/packaging-equipment/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.tnasolutions.com/products/packaging-equipment/vertical-form-fill-seal-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <p>
+                    <strong>[5]</strong> VFFS Baggers. Rovema. link: <a href="https://www.rovema-na.com/products/vffs-baggers" class="text-blue-400 hover:underline">https://www.rovema-na.com/products/vffs-baggers</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-indigo-500 pl-4">
+                  <p>
+                    <strong>[6]</strong> Vertical Form Fill Seal. Bosch Packaging. link: <a href="https://www.syntegon.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.syntegon.com/products/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-pink-500 pl-4">
+                  <p>
+                    <strong>[7]</strong> What is a VFFS Machine? All-Fill. link: <a href="https://all-fill.com/blog/what-is-a-vffs-machine" class="text-blue-400 hover:underline">https://all-fill.com/blog/what-is-a-vffs-machine</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-teal-500 pl-4">
+                  <p>
+                    <strong>[8]</strong> How VFFS Machines Work. Matrix. link: <a href="https://www.matrixpm.com/packaging-machines/vffs/" class="text-blue-400 hover:underline">https://www.matrixpm.com/packaging-machines/vffs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[9]</strong> VFFS Machines - General Info. Omori Europe. link: <a href="https://www.omorieurope.com/en/packaging-machines/vffs" class="text-blue-400 hover:underline">https://www.omorieurope.com/en/packaging-machines/vffs</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <p>
+                    <strong>[10]</strong> VFFS Equipment Overview. Paxiom. link: <a href="https://www.paxiom.com/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.paxiom.com/vertical-form-fill-seal-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <p>
+                    <strong>[11]</strong> VFFS Baggers. Weighpack. link: <a href="https://www.weighpack.com/vffs-machines/" class="text-blue-400 hover:underline">https://www.weighpack.com/vffs-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[12]</strong> VFFS Sealing Jaws. Greener Corp. link: <a href="https://greenercorp.com/resource-blog/pressure-heat-adjustments-sealing-jaw-designs/" class="text-blue-400 hover:underline">https://greenercorp.com/resource-blog/pressure-heat-adjustments-sealing-jaw-designs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                  <p>
+                    <strong>[13]</strong> Vertical Form Fill Seal (VFFS) Packaging Machines. BW Flexible Systems. link: <a href="https://www.bwfurlongandassociates.com/vffs-machines" class="text-blue-400 hover:underline">https://www.bwfurlongandassociates.com/vffs-machines</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <p>
+                    <strong>[14]</strong> Understanding VFFS Technology. PAC Machinery. link: <a href="https://www.pacmachinery.com/products/vffs-machines/" class="text-blue-400 hover:underline">https://www.pacmachinery.com/products/vffs-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-indigo-500 pl-4">
+                  <p>
+                    <strong>[15]</strong> Vertical Form Fill Seal Machines Guide. PPMA. link: <a href="https://www.ppma.co.uk/products/vertical-form-fill-seal-machines.html" class="text-blue-400 hover:underline">https://www.ppma.co.uk/products/vertical-form-fill-seal-machines.html</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-pink-500 pl-4">
+                  <p>
+                    <strong>[16]</strong> VFFS Machines Types and Benefits. KBW Packaging. link: <a href="https://www.kbw-packaging.com/machines/form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.kbw-packaging.com/machines/form-fill-seal-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-teal-500 pl-4">
+                  <p>
+                    <strong>[17]</strong> Flexible Packaging Equipment. Mespack. link: <a href="https://www.mespack.com/machines/vffs/" class="text-blue-400 hover:underline">https://www.mespack.com/machines/vffs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[18]</strong> VFFS Technical Overview. Mamata Machinery. link: <a href="https://www.mamata.com/vffs-vertical-form-fill-seal-machine.html" class="text-blue-400 hover:underline">https://www.mamata.com/vffs-vertical-form-fill-seal-machine.html</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <p>
+                    <strong>[19]</strong> VFFS Machine Video Demos. ILAPAK. link: <a href="https://www.ilapak.com/packaging-machines/vffs" class="text-blue-400 hover:underline">https://www.ilapak.com/packaging-machines/vffs</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <p>
+                    <strong>[20]</strong> VFFS Automation Integration. Heat and Control. link: <a href="https://www.heatandcontrol.com/solutions/packaging/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.heatandcontrol.com/solutions/packaging/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[21]</strong> Small Footprint VFFS Machines. Nichrome. link: <a href="https://www.nichrome.com/machines/vertical-form-fill-seal-machines/" class="text-blue-400 hover:underline">https://www.nichrome.com/machines/vertical-form-fill-seal-machines/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                  <p>
+                    <strong>[22]</strong> Hygienic VFFS Designs. Hayssen Flexible Systems. link: <a href="https://www.hayssen.com/vertical-form-fill-seal" class="text-blue-400 hover:underline">https://www.hayssen.com/vertical-form-fill-seal</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <p>
+                    <strong>[23]</strong> Vertical FFS Machines with Servo. Fres-co System USA. link: <a href="https://www.fresco.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.fresco.com/products/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-indigo-500 pl-4">
+                  <p>
+                    <strong>[24]</strong> Twin Tube VFFS Overview. SN Maschinenbau. link: <a href="https://www.sn-maschinenbau.com/en/vertical-form-fill-seal-machine-vffs/" class="text-blue-400 hover:underline">https://www.sn-maschinenbau.com/en/vertical-form-fill-seal-machine-vffs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-pink-500 pl-4">
+                  <p>
+                    <strong>[25]</strong> Vertical Form Fill Seal with Multi-Lane. Matrix Packaging. link: <a href="https://www.matrixpm.com/machines/vffs/" class="text-blue-400 hover:underline">https://www.matrixpm.com/machines/vffs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-teal-500 pl-4">
+                  <p>
+                    <strong>[26]</strong> VFFS Machine Applications. Viking Masek. link: <a href="https://www.vikingmasek.com/packaging-machines/form-fill-seal/vffs" class="text-blue-400 hover:underline">https://www.vikingmasek.com/packaging-machines/form-fill-seal/vffs</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[27]</strong> Sachet Packing with VFFS. Turpack. link: <a href="https://www.turpack.com/vffs-vertical-form-fill-and-seal-machine/" class="text-blue-400 hover:underline">https://www.turpack.com/vffs-vertical-form-fill-and-seal-machine/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <p>
+                    <strong>[28]</strong> Stick Pack and VFFS. Aranow. link: <a href="https://www.aranow.com/en/solutions/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.aranow.com/en/solutions/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <p>
+                    <strong>[29]</strong> High Speed VFFS Machine. Rovema. link: <a href="https://www.rovema.com/packaging-machines/vertical-form-fill-seal" class="text-blue-400 hover:underline">https://www.rovema.com/packaging-machines/vertical-form-fill-seal</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-red-500 pl-4">
+                  <p>
+                    <strong>[30]</strong> Servo Controlled VFFS. Bosch Packaging. link: <a href="https://www.boschpackaging.com/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.boschpackaging.com/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                  <p>
+                    <strong>[31]</strong> Continuous Motion VFFS Systems. GEA Group. link: <a href="https://www.gea.com/en/products/vffs-machines.jsp" class="text-blue-400 hover:underline">https://www.gea.com/en/products/vffs-machines.jsp</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <p>
+                    <strong>[32]</strong> Quad Seal Bag with VFFS. AlliedFlex. link: <a href="https://www.alliedflex.com/vffs-machinery/" class="text-blue-400 hover:underline">https://www.alliedflex.com/vffs-machinery/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-indigo-500 pl-4">
+                  <p>
+                    <strong>[33]</strong> Vertical Sealing for Pouches. Omori Machinery. link: <a href="https://www.omori.eu/en/products/vffs/" class="text-blue-400 hover:underline">https://www.omori.eu/en/products/vffs/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-pink-500 pl-4">
+                  <p>
+                    <strong>[34]</strong> VFFS Machine Features and Specs. Fuji Packaging. link: <a href="https://www.fujipackaging.com/products/vertical-form-fill-seal/" class="text-blue-400 hover:underline">https://www.fujipackaging.com/products/vertical-form-fill-seal/</a>
+                  </p>
+                </div>
+                <div class="border-l-4 border-teal-500 pl-4">
+                  <p>
+                    <strong>[35]</strong> Integration of VFFS in Production Lines. IMA Group. link: <a href="https://www.ima.it/packaging/vffs/" class="text-blue-400 hover:underline">https://www.ima.it/packaging/vffs/</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Conclusion -->
+            <div class="text-center bg-gradient-to-r from-blue-900 to-green-900 p-8 rounded-lg">
+              <h3 class="text-2xl font-semibold text-white mb-4">الخاتمة</h3>
+              <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                تمثل دراسة الجدوى هذه خارطة طريق شاملة لتطوير مشروع آلة التعبئة متعددة المسارات، والذي يهدف إلى تلبية احتياجات السوق المحلي من خلال تقديم حل تقني متقدم بتكلفة معقولة. يتطلع فريق المشروع إلى تحويل هذه الدراسة إلى واقع عملي يسهم في تطوير الصناعة المحلية ويدعم الاقتصاد الوطني.
+              </p>
+              <div class="mt-6 text-sm text-gray-400">
+                <p>
+                  <strong>أعدت هذه الدراسة تحت إشراف الدكتور محمد أحمد عبد الله المضواحي، رئيس قسم الميكاترونكس، وبمشاركة خبراء ميدانيين</strong>
+                </p>
+                <div class="divider my-4"></div>
+                <!-- Team Section -->
+                <div class="team-section mt-8">
+                  <h5 class="font-semibold text-white mb-6 text-xl">فريق المشروع:</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="team-member text-center" data-scroll="fade-left">
+                      <div class="member-photo neon-circle">
+                        <img alt="Osama Mohammed Al-Sharma" class="w-32 h-32 rounded-full mx-auto pulse" src="team/osama.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-blue">
+                        أسامة محمد الشرماء
+                      </p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="team-member text-center">
+                      <div class="member-photo neon-circle">
+                        <img alt="Hussein Saeed Masoud" class="w-32 h-32 rounded-full mx-auto pulse" src="team/hussein.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-green">
+                        حسين سعيد مسعود
+                      </p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="team-member text-center" data-scroll="fade-right">
+                      <div class="member-photo neon-circle">
+                        <img alt="Sahar Faisal Al-Taibi" class="w-32 h-32 rounded-full mx-auto pulse" src="team/sahar.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-purple">
+                        سحر فيصل الطيبي
+                      </p>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="team-member text-center" data-scroll="fade-left">
+                      <div class="member-photo neon-circle">
+                        <img alt="Abdulnasser Jamal Al-Sanabani" class="w-32 h-32 rounded-full mx-auto pulse" src="team/abdulnasser1.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-yellow">
+                        عبدالناصر جمال السنباني
+                      </p>
+                    </div>
+                    <!-- Team Member 5 -->
+                    <div class="team-member text-center">
+                      <div class="member-photo neon-circle">
+                        <img alt="Abdulnasser Mohammed Saad" class="w-32 h-32 rounded-full mx-auto pulse" src="team/abdulnasser2.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-blue">
+                        عبدالناصر محمد سعد
+                      </p>
+                    </div>
+                    <!-- Team Member 6 -->
+                    <div class="team-member text-center" data-scroll="fade-right">
+                      <div class="member-photo neon-circle">
+                        <img alt="Kamal Abdulwahab Al-Rawafi" class="w-32 h-32 rounded-full mx-auto pulse" src="team/kamal.jpg" />
+                      </div>
+                      <p class="mt-4 text-neon-orange">
+                        كمال عبدالوهاب الروافي
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider my-4"></div>
+                <p>
+                  قسم الميكاترونكس - جامعة ذمار - 2025/2026
+                </p>
+                <div class="mt-4 text-neon-blue">
+                  ••••••••••تم بحمد الله تعالى••••••••••
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="script.js"></script>
+        </div>
+      </div>
+    </body>
+  </html>

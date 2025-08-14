@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YEMEN VFFS Multi Line Machine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a15, #0c0c1f, #0a0a15);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-width: 1200px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(10, 20, 70, 0.4) 0%, rgba(0, 0, 0, 0.9) 90%);
+            z-index: -1;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0, 100, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 100, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -2;
+        }
+
+        .print-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #0a0a15, #1a1a2e);
+            border: none;
+            color: #0ff;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+            transition: all 0.3s ease;
+            z-index: 10;
+            border: 1px solid rgba(0, 195, 255, 0.3);
+        }
+
+        .print-btn:hover {
+            background: linear-gradient(135deg, #1a1a2e, #0a0a15);
+            box-shadow: 0 0 25px rgba(0, 195, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .main-title {
+            margin: 40px 0;
+            font-size: 4rem;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(90deg, #00ffff, #0066ff, #00ffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: neonTitle 8s linear infinite;
+            text-shadow: 0 0 10px rgba(0, 195, 255, 0.6);
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        @keyframes neonTitle {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin: 40px 0;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 500px;
+            background: rgba(10, 15, 30, 0.7);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 195, 255, 0.3);
+            border: 1px solid rgba(0, 195, 255, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 30px rgba(0, 195, 255, 0.6);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #0066ff, #00ffff, #0066ff);
+            background-size: 400%;
+            z-index: -1;
+            border-radius: 22px;
+            animation: neonBorder 30s linear infinite;
+        }
+
+        @keyframes neonBorder {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+
+        .card-content {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+        }
+
+        .card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .card-bg {
+            opacity: 0.9;
+        }
+
+        .team-section {
+            margin-top: 80px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .team-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #0ff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-container {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(10, 15, 30, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
+            border: 1px solid rgba(0, 195, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .icon-container:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 195, 255, 0.6);
+        }
+
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #0066ff, #00ffff, #0066ff);
+            background-size: 400%;
+            z-index: -1;
+            border-radius: 50%;
+            animation: neonBorder 12s linear infinite;
+        }
+
+        .member-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #333;
+            border: 2px solid rgba(0, 195, 255, 0.3);
+        }
+
+        .member-name {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #0ff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            letter-spacing: 1px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .desktop-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 50, 50, 0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-message" id="desktopMessage">
+        This interface is designed for desktop view only. Please use a larger screen for optimal experience.
+    </div>
+    
+    <div class="grid-bg"></div>
+    <div id="particles-js"></div>
+
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> Print Page
+    </button>
+
+    <h1 class="main-title">YEMEN VFFS Multi Line Machine</h1>
+
+    <div class="cards-container">
+        <div class="card" onclick="openPage('feasibility_study.html')">
+            <div class="card-bg" style="background-image: url('images/study_interface (2).png')"></div>
+            <div class="card-content">feasibility study</div>
+        </div>
+        <div class="card" onclick="handleGanttChart()">
+            <div class="card-bg" style="background-image: url('images/study_interface (2).png')"></div>
+            <div class="card-content">Gantt Chart</div>
+        </div>
+        <div class="card" onclick="openPage('3.html')">
+            <div class="card-bg" style="background-image: url('images/study_interface (2).png')"></div>
+            <div class="card-content">Quality Control</div>
+        </div>
+        <div class="card" onclick="openPage('4.html')">
+            <div class="card-bg" style="background-image: url('images/study_interface (2).png')"></div>
+            <div class="card-content">Maintenance</div>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <h2 class="team-title">Project Team</h2>
+        <div class="team-grid">
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/osama.jpg" alt="Osama Mohammed Al-Sharma" class="member-img">
+                </div>
+                <div class="member-name">Osama Mohammed Al-Sharma</div>
+            </div>
+            
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/hussein.jpg" alt="Hussein Saeed Masoud" class="member-img">
+                </div>
+                <div class="member-name">Hussein Saeed Masoud</div>
+            </div>
+            
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/sahar.jpg" alt="Sahar Faisal Al-Taibi" class="member-img">
+                </div>
+                <div class="member-name">Sahar Faisal Al-Taibi</div>
+            </div>
+            
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/abdulnasser1.jpg" alt="Abdulnasser Jamal Al-Sanabani" class="member-img">
+                </div>
+                <div class="member-name">Abdulnasser Jamal Al-Sanabani</div>
+            </div>
+            
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/abdulnasser2.jpg" alt="Abdulnasser Mohammed Saad" class="member-img">
+                </div>
+                <div class="member-name">Abdulnasser Mohammed Saad</div>
+            </div>
+            
+            <div class="member">
+                <div class="icon-container">
+                    <img src="team/kamal.jpg" alt="Kamal Abdulwahab Al-Rawafi" class="member-img">
+                </div>
+                <div class="member-name">Kamal Abdulwahab Al-Rawafi</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 YEMEN VFFS Multi Line Machine. All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#00ffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00ffff",
+                    opacity: 0.1,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        function openPage(page) {
+            window.open(page, '_blank');
+        }
+
+        function handleGanttChart() {
+            const confirmation = confirm("سيتم تنزيل ملف الجدول الزمني بأسم Gantt_Chart_VFFS.xlsx. بعد التنزيل، يرجى فتحه من مجلد التحميل");
+            
+            if (confirmation) {
+                const link = document.createElement('a');
+                link.href = 'Gantt_Chart_Project.xlsx';
+                link.download = 'Gantt_Chart_VFFS.xlsx';
+                link.target = '_blank';
+                
+                window.open('', '_blank');
+                
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                setTimeout(() => {
+                    alert("تم التنزيل بنجاح! يرجى فتح الملف من مجلد التحميل");
+                }, 2000);
+            }
+        }
+
+        function checkScreenSize() {
+            const message = document.getElementById('desktopMessage');
+            if (window.innerWidth < 1000) {
+                message.style.display = 'block';
+            } else {
+                message.style.display = 'none';
+            }
+        }
+
+        window.onload = function() {
+            checkScreenSize();
+            enforceDesktopView();
+        };
+
+        window.onresize = checkScreenSize;
+
+        function enforceDesktopView() {
+            const viewportMeta = document.querySelector('meta[name="viewport"]');
+            viewportMeta.content = "width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+        }
+    </script>
+</body>
+</html>
